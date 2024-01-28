@@ -22,7 +22,7 @@ namespace DwitterSocial.Extensions
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddDbContext<AppDbContext>(opt =>
             {
-                opt.UseNpgsql(config.GetConnectionString("localhost"));
+                opt.UseNpgsql(config.GetConnectionString("Dev"));
             });
 
             return services;
